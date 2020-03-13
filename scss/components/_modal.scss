@@ -1,0 +1,73 @@
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: $black; 
+    background-color: $black_opacity; 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $white;
+    margin: 15% auto; 
+    padding: 20px;
+    @include border;
+    width: 80%; 
+    @media(min-width: $break-m){
+        width: 60%;
+    }
+    @media(min-width: $break-l){
+        width: 40%;
+    }
+  }
+  
+  /* The Close Button */
+  .close {
+    float: right;
+    @include modal_btn;
+  }
+
+  /* Previous and next Buttons */
+  .previous,
+  .next {
+    @include modal_btn;
+    position: relative;
+    top: 150px;
+  }
+
+  .previous {
+    float: left;
+    margin-right: 20px;
+    
+  }
+
+  .next {
+    float: right;
+    margin-left: 20px;
+    left: 15px;
+  }
+  
+  .close:hover,
+  .previous:hover,
+  .next:hover {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  //-----------------
+
+  .modal_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    hr{
+        width: 100%;
+    }
+  }

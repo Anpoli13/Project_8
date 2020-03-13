@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+    @media(min-width: $break-m) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(min-width: $break-l) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

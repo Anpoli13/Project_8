@@ -1,0 +1,10 @@
+// Names Of Base Colors
+$black          : rgb(0,0,0);
+$black_opacity  : rgba(0,0,0,0.4);
+$white          : rgb(255, 255, 255);
+$grey           : rgb(136, 136, 136);
+$light_grey     : lighten($grey, 25%);
+
+// Media query breakpoints
+$break-m: 768px;
+$break-l: 1024px;

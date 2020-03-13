@@ -1,0 +1,14 @@
+.alphabetrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.letter{
+    @include border;
+    background-color: $white;
+    margin: 2px;
+}

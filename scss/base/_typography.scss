@@ -1,0 +1,20 @@
+$base-font-family: 'Source Sans Pro', sans-serif;
+
+*{
+    font-family: $base-font-family;
+}
+
+li {
+    color: $grey;
+    padding: 1px;
+}
+
+.employeeName {
+    color: $black;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+h1{
+    font-weight: normal;
+}
