@@ -3,7 +3,7 @@ const modal = document.querySelector('.modal');
 const alphabetRow = document.querySelector('.alphabetrow');
 const usersUrl = 'https://randomuser.me/api/?results=12&inc=name,location,email,dob,cell,picture&?nat=us,gb';
 let employees = [];
-const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const alphabet = ["All", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
 
@@ -188,9 +188,14 @@ function genereteModalHTML(employee) {
 function filter () {
     alphabetRow.addEventListener('click', (e) => {
         let clickButton = e.target.value;
-        let filteredEmployees = employees.filter(employee => employee.name.first.charAt(0) === clickButton);
-        container.innerHTML = '';
-        genereteHTML(filteredEmployees);
+        if(e.target.value === 'All') {
+            container.innerHTML = '';
+            genereteHTML(employees);
+        } else {
+            let filteredEmployees = employees.filter(employee => employee.name.first.charAt(0) === clickButton);
+            container.innerHTML = '';
+            genereteHTML(filteredEmployees);
+        }
         
     })
 }
